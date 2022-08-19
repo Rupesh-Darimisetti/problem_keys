@@ -1,7 +1,7 @@
 package basic;
 
 import java.util.Scanner;
-
+// 3 - area of Rectangle
 public class AreaofRectangle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

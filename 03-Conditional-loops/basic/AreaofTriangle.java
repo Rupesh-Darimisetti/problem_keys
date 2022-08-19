@@ -1,7 +1,7 @@
 package basic;
 
 import java.util.Scanner;
-
+// 2 - area of scalance triangle
 public class AreaOfTriangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
