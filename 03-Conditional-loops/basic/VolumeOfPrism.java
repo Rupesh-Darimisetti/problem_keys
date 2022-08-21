@@ -1,0 +1,17 @@
+package basic;
+
+import java.util.Scanner;
+// 15. Volume Of Prism
+public class VolumeOfPrism {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter length of Prism: ");
+        float length = input.nextFloat();
+        System.out.print("Enter breth of Prism: ");
+        float breath = input.nextFloat();
+        System.out.print("Enter height of Prism: ");
+        float height = input.nextFloat();
+        double volume_of_rec_prism = length * breath * height;
+        System.out.println("Volume of Prism = " + volume_of_rec_prism);
+    }
+}
