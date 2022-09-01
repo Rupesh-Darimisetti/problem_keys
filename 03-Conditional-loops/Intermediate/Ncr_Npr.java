@@ -22,7 +22,7 @@ public class Ncr_Npr {
             System.out.print("The value of " + num +"P"+ r_num +" = " + npr);
         }
     }
-   public static long factorial(long num){
+   private static long factorial(long num){
         return num == 0 ? 1: (num * factorial(num - 1));
     }
 }
