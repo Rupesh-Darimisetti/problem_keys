@@ -1,4 +1,4 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
@@ -33,6 +33,10 @@ public class ElectricityBill {
         char scheme_type = input.next().charAt(0);
         System.out.print("Enter units of Electric Bill: ");
         int units = input.nextInt();
+        double total = electricityBill(scheme_type, units);
+        System.out.print("The Current total current bill for "+ units + " units = " + total);
+    }
+    private static double electricityBill(char scheme_type, int units) {
         double total = 0;
         if(scheme_type == 'A' || scheme_type == 'a'){
             if(units <=50){
@@ -42,16 +46,16 @@ public class ElectricityBill {
                 total = (50 * 1.45 ) + (units - 50) * 2.6;
             }
         } else if (scheme_type == 'B' || scheme_type == 'b') {
-            if(units <= 50) total = units*	2.6;
+            if(units <= 50) total = units *	2.6;
             else if (units <= 100)  total = units * 2.6;
             else if (units <= 200) total = (100 * 2.6) + (units - 100) * 3.6;
             else if (units <= 225) total = (100 * 2.6) + (100 * 3.6) +(units - 200) * 6.9;
             } else if (scheme_type == 'C' || scheme_type == 'c') {
 
-            if(units <= 50) total = units*	2.65;
-            else if (units <= 100)  total = (50 * 2.65)+ (units-50) * 3.35;
+            if(units <= 50) total = units *	2.65;
+            else if (units <= 100)  total = (50 * 2.65)+ (units -50) * 3.35;
             else if (units <= 200) total = (50 * 2.65) + (50*3.35) + (units - 100) * 5.4;
-            else if (units <= 300)  total = (50*2.65) + (50*3.35) + (100 * 5.4)+ (units-200)*	7.1	;
+            else if (units <= 300)  total = (50*2.65) + (50*3.35) + (100 * 5.4)+ (units -200)*	7.1	;
             else if (units <= 400)  total = (50*2.65) + (50*3.35) + (100 * 5.4)+ (100 * 7.1)+ (units - 300)	*7.95;
             else {
                 if (units <= 500)
@@ -60,6 +64,6 @@ public class ElectricityBill {
                     total = (50 * 2.65) + (50 * 3.35) + (100 * 5.4) + (100 * 7.1) + (100 * 7.95) + (100 * 8.5) + (units - 500) * 9.95;
             }
         }
-        System.out.print("The Current total current bill for "+ units + " units = " + total);
+        return total;
     }
 }

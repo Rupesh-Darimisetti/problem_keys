@@ -1,20 +1,24 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
 // 13. Sum Of N Numbers
 public class SumOfNNumbers {
     public static void main(String[] args) {
-   Scanner imput = new Scanner(System.in);
+   Scanner input = new Scanner(System.in);
         System.out.print("Enter total numbers of Numbers you want to Enter: ");
-        int total = imput.nextInt();
-        long num = imput.nextLong();
+        int total = input.nextInt();
+        long num = input.nextLong();
         long sum = 0, val = 0;
+        sum = sumOfNumbers(input, total, num, sum, val);
+        System.out.println("The total sum of " + total + " numbers = " + sum);
+    }
+    private static long sumOfNumbers(Scanner input, int total, long num, long sum, long val) {
         while(val <= total){
             sum += num;
-            num = imput.nextLong();
+            num = input.nextLong();
             val++;
         }
-        System.out.println("The total sum of " + total + " numbers = " + sum);
+        return sum;
     }
 }

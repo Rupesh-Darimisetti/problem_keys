@@ -1,4 +1,4 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
@@ -6,15 +6,18 @@ import java.util.Scanner;
 public class CompoundInterest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter principal Amount: ");
+        System.out.print("Enter Principal Amount: ");
         double principal = input.nextDouble();
-        System.out.print("Enter Intrest rate: ");
-        double rate_of_intrest = input.nextDouble() /100;
-        System.out.print("Enter total time elasped or for a year how many times the intrest is paid: ");
-        double time_elasped = input.nextDouble();
+        System.out.print("Enter Interest rate: ");
+        double rate_of_interest = input.nextDouble() /100;
+        System.out.print("Enter total time elapsed or for a year how many times the intrest is paid: ");
+        double time_elapsed = input.nextDouble();
         System.out.print("Enter time in years: ");
         float time = input.nextFloat();
-        double compund_intrest = principal * Math.pow((1 + (rate_of_intrest / time_elasped)),(time_elasped * time));
-        System.out.print("The Compound intrest = " + compund_intrest);
+        double compund_interest = compoundInterest(principal, rate_of_interest, time_elapsed, time);
+        System.out.print("The Compound Interest = " + compund_interest);
+    }
+    private static double compoundInterest(double principal, double rate_of_interest, double time_elapsed, float time) {
+        return principal * Math.pow((1 + (rate_of_interest / time_elapsed)), (time_elapsed * time));
     }
 }

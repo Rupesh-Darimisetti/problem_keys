@@ -1,4 +1,4 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
@@ -10,9 +10,12 @@ public class DiscountOfProduct {
         double list_Price = input.nextDouble();
         System.out.print("Enter selling price of product: ");
         double selling_price = input.nextDouble();
-        double discount = list_Price - selling_price;
-        double rate_of_discount = (discount / list_Price) * 100;
-        System.out.println("The discount of product = "+ discount );
+        double rate_of_discount = rateOfDiscount(list_Price, selling_price);
         System.out.println("The rate of discount = " + rate_of_discount + "%");
+    }
+    private static double rateOfDiscount(double list_Price, double selling_price) {
+        double discount = list_Price - selling_price;
+        System.out.println("The discount of product = "+ discount );
+        return (discount / list_Price) * 100;
     }
 }

@@ -1,4 +1,4 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
@@ -12,6 +12,9 @@ public class SumNegativeNosSumPositiveEvenNosSumPositiveOddNos {
                 "and the sum of positive odd numbers from a list of numbers (N) entered by the user.\n" +
                 "The list terminates when the user enters a zero.");
         int num = input.nextInt();
+        sumOfPositiveEvenOddAndNegativeNos(input, num);
+    }
+    private static void sumOfPositiveEvenOddAndNegativeNos(Scanner input, int num) {
         long neg_sum = 0, pos_eve_sum = 0, pos_odd_sum = 0;
         while(num != 0){
             if(num < 0) {

@@ -1,4 +1,4 @@
-package Intermediate;
+package assignment123Functions.conditionalLoops.intermediate;
 
 import java.util.Scanner;
 
@@ -10,12 +10,15 @@ public class BattingAverage {
         long balls = input.nextLong();
         System.out.print("Enter total Hits for all " +balls + " balls: ");
         double hits = input.nextLong();
+        double batting_average = battingAverage(input, balls, hits);
+        System.out.println("The Batting average for " + balls + " balls"+
+                " and " + hits + " hits  = " + batting_average);
+    }
+    private static double battingAverage(Scanner input, long balls, double hits) {
         while(hits > balls) {
             System.out.print("Please enter hits less tham are equal to total " + balls + " balls: ");
             hits = input.nextDouble();
         }
-        double batting_average = hits / balls;
-        System.out.println("The Batting average for " + balls + " balls"+
-                " and " + hits + " hits  = " + batting_average);
+        return hits / balls;
     }
 }
