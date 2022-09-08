@@ -1,5 +1,7 @@
-import java.util.Arrays;
+package easy;
 
+import java.util.Arrays;
+// 2. Concatenation of Array
 public class ConcatenationOfArray {
     public static void main(String[] args) {
     int[] nums = {1,2,1};

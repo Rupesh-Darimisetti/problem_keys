@@ -1,5 +1,7 @@
-import  java.util.Arrays;
+package easy;
 
+import  java.util.Arrays;
+// 3. Running Sum of 1d Array
 public class RunningSumOf1DArray {
     public static void main(String[] args) {
         int[] num = {1, 2, 3, 4};

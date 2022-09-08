@@ -1,5 +1,7 @@
-import java.util.Arrays;
+package easy;
 
+import java.util.Arrays;
+// 1. Build Array from Permutation
 public class ArrayFromPermutation {
     public static void main(String[] args) {
         int[] nums ={0,2,1,5,3,4};

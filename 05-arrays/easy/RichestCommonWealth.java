@@ -1,5 +1,6 @@
-import java.util.Arrays;
+package easy;
 
+// 4. Richest Customer Wealth
 public class RichestCommonWealth {
     public static void main(String[] args) {
         int[][] account = {{1,5},{7,3},{3,5}};
