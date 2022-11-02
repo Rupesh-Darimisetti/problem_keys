@@ -10,7 +10,7 @@ public class _04_TwoSumII_InputArrayIsSorted {
         System.out.println(Arrays.toString(res));
     }
     private static int[] twoSum(int[] numbers, int target) {
-        int sum = 0;
+        int sum;
         int[] ans = {0,0};
         int first = 0; int last = numbers.length -1;
         while(true){
