@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 public class _4_SetMatrixZeroes {
     public static void main(String[] args) {
-        int[][] matrix = {{1,1,1},{1,0,1},{1,1,1}};
+        int[][] matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         int[][] ans = setZeroes(matrix);
         System.out.println(Arrays.deepToString(ans));
     }
+
     private static int[][] setZeroes(int[][] matrix) {
         int n = matrix.length;
         int m = matrix[0].length;
@@ -19,8 +20,8 @@ public class _4_SetMatrixZeroes {
                 break;
             }
         }
-        for (int i = 0; i < n; i++) {
-            if (matrix[i][0] == 0) {
+        for (int[] ints : matrix) {
+            if (ints[0] == 0) {
                 isColZero = true;
                 break;
             }

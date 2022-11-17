@@ -1,26 +1,27 @@
 package easy;
 
-import java.util.HashSet;
 import java.util.Arrays;
+import java.util.HashSet;
 
-class _12_IntersectionOfTwoArrays{
-    public static void main(String[] args, int[] is) {
+class _12_IntersectionOfTwoArrays {
+    public static void main(String[] args) {
 
-        int[] nums1 = {4,9,5}, nums2 = {9,4,9,8,4};
-        int[] intersection = intersection(nums1, nums2);
+        int[] numbers1 = {4, 9, 5}, numbers2 = {9, 4, 9, 8, 4};
+        int[] intersection = intersection(numbers1, numbers2);
         System.out.println(Arrays.toString(intersection));
     }
-    private  static int[] intersection(int[] nums1, int[] nums2) {
-        HashSet<Integer> set = new HashSet();
-        HashSet<Integer> res = new HashSet();
 
-        for(int itr = 0; itr < nums1.length; itr++){
-            set.add(nums1[itr]);
+    private static int[] intersection(int[] numbers1, int[] numbers2) {
+        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> res = new HashSet<>();
+
+        for (int value : numbers1) {
+            set.add(value);
         }
 
-        for(int itr = 0; itr < nums2.length; itr++){
-            if(set.contains(nums2[itr])){
-                res.add(nums2[itr]);
+        for (int num : numbers2) {
+            if (set.contains(num)) {
+                res.add(num);
             }
         }
 

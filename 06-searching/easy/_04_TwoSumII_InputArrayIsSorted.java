@@ -9,17 +9,19 @@ public class _04_TwoSumII_InputArrayIsSorted {
         int[] res = twoSum(numbers, target);
         System.out.println(Arrays.toString(res));
     }
+
     private static int[] twoSum(int[] numbers, int target) {
         int sum;
-        int[] ans = {0,0};
-        int first = 0; int last = numbers.length -1;
-        while(true){
+        int[] ans = {0, 0};
+        int first = 0;
+        int last = numbers.length - 1;
+        while (true) {
             sum = numbers[first] + numbers[last];
-            if(sum == target){
-                ans[0] = first +1;
-                ans[1] = last +1;
+            if (sum == target) {
+                ans[0] = first + 1;
+                ans[1] = last + 1;
                 break;
-            } else if(sum > target){
+            } else if (sum > target) {
                 last--;
             } else first++;
         }

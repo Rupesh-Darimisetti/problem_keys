@@ -2,18 +2,19 @@ package easy;
 
 class _16_SpecialArrayWithXElementsGreaterThanOrEqualX {
     public static void main(String[] args) {
-        int[] nums = {0,4,3,0,4};
-        int noOfElements = specialArray(nums);
+        int[] numberArray = {0, 4, 3, 0, 4};
+        int noOfElements = specialArray(numberArray);
         System.out.println(noOfElements);
     }
-    private static int specialArray(int[] nums) {
+
+    private static int specialArray(int[] numberArray) {
         int start = 0;
-        int end = nums.length;
+        int end = numberArray.length;
         while (start <= end) {
             int mid = start + (end - start) / 2;
             int count = 0;
-            for (int i = 0; i < nums.length; i++) {
-                if (nums[i] >= mid) {
+            for (int num : numberArray) {
+                if (num >= mid) {
                     count++;
                 }
             }

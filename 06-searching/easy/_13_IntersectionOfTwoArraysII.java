@@ -1,30 +1,35 @@
 package easy;
 
-class _13_IntersectionOfTwoArraysII{
-          public static void main(String[] args, int[] is) {
+import java.util.ArrayList;
+import java.util.Arrays;
 
-              int[]  nums1 = {4,9,5}, nums2 = {9,4,9,8,4}; // Output: [4,9]
+class _13_IntersectionOfTwoArraysII {
+    public static void main(String[] args) {
 
-              int[] intersection = intersection(nums1, nums2);
-              System.out.println(Arrays.toString(intersection));
-          }
+        int[] numbers1 = {4, 9, 5}, numbers2 = {9, 4, 9, 8, 4}; // Output: [4,9]
 
-           public int[] intersect(int[] nums1, int[] nums2) {
+        int[] intersection = intersect(numbers1, numbers2);
+        System.out.println(Arrays.toString(intersection));
+    }
+
+    private static int[] intersect(int[] numbers1, int[] numbers2) {
         ArrayList<Integer> list = new ArrayList<>();
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
+        Arrays.sort(numbers1);
+        Arrays.sort(numbers2);
         int i = 0, j = 0;
-        while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] < nums2[j])     i++;
-            else if (nums1[i] > nums2[j])  j++;
+        while (i < numbers1.length && j < numbers2.length) {
+            if (numbers1[i] < numbers2[j])
+                i++;
+            else if (numbers1[i] > numbers2[j])
+                j++;
             else {
-                list.add(nums1[i]);
+                list.add(numbers1[i]);
                 i++;
                 j++;
             }
         }
 
-        int ans[] = new int[list.size()];
+        int[] ans = new int[list.size()];
         int index = 0;
         for (int ele : list) {
             ans[index++] = ele;

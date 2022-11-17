@@ -10,8 +10,9 @@ public class _3_SpiralMatrixIII {
         int[][] res = spiralMatrixIII(rows, cols, rStart, cStart);
         System.out.println(Arrays.deepToString(res));
     }
+
     private static int[][] spiralMatrixIII(int rows, int cols, int rStart, int cStart) {
-        int[][] dirt = new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
+        int[][] dirt = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         List<int[]> res = new ArrayList<>();
         int len = 0, d = 0; // move <len> steps in the <d> direction
         res.add(new int[]{rStart, cStart});

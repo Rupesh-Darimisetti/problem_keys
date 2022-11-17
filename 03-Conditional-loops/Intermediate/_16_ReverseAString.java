@@ -1,0 +1,18 @@
+package intermediate;
+
+import java.util.Scanner;
+
+// 16. Reverse A String In Java
+public class _16_ReverseAString {
+    public static void main(String[] args) {
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a Word: ");
+            String word = input.next();
+            StringBuilder reverseWord = new StringBuilder();
+            for (int ch = word.length() - 1; ch >= 0; ch--) {
+                reverseWord.append(word.charAt(ch));
+            }
+            System.out.println("The reverse word for " + word + " = " + reverseWord);
+        }
+    }
+}
