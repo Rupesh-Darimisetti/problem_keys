@@ -5,14 +5,15 @@ import java.util.Scanner;
 // 15. Find Ncr & Npr
 public class _15_Ncr_Npr {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter C for nCr or P for nPr: ");
-        char operation = input.next().toLowerCase().charAt(0);
-        System.out.print("Enter a Number: ");
-        long num = input.nextLong();
-        System.out.print("Enter second r Number: ");
-        long r_num = input.nextLong();
-        combinationPermutation(operation, num, r_num);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter C for nCr or P for nPr: ");
+            char operation = input.next().toLowerCase().charAt(0);
+            System.out.print("Enter a Number: ");
+            long num = input.nextLong();
+            System.out.print("Enter second r Number: ");
+            long r_num = input.nextLong();
+            combinationPermutation(operation, num, r_num);
+        }
     }
 
     private static void combinationPermutation(char operation, long num, long r_num) {

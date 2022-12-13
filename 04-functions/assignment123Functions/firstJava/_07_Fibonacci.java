@@ -7,9 +7,10 @@ public class _07_Fibonacci {
     public static void main(String[] args) {
         final int num;
         int sum = 0;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        num = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            num = input.nextInt();
+        }
         System.out.print("Fibonacci Series: ");
         fibonacciSeries(num, sum);
     }

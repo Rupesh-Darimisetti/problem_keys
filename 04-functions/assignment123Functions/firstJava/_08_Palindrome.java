@@ -7,9 +7,10 @@ public class _08_Palindrome {
         final String name;
         String reverseName = "";
         final String message;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a string: ");
-        name = input.next();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a string: ");
+            name = input.next();
+        }
         int len = name.length();
         reverseName = reverseName(name, reverseName, len);
         message = (name.equals(reverseName)) ? "The String " + name + " is a Palindrome"

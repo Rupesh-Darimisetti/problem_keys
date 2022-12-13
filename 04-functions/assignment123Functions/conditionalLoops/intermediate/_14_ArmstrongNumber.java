@@ -5,15 +5,16 @@ import java.util.Scanner;
 // 14. Armstrong Number In Java
 public class _14_ArmstrongNumber {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number to check it is Armstrong or not: ");
-        long real_num = input.nextLong();
-        long sum = 0;
-        sum = armstrongNo(sum, real_num);
-        if (sum == real_num) {
-            System.out.println("The Given Number is an Armstrong Number");
-        } else {
-            System.out.println("The Given Number is not an Armstrong Number");
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a number to check it is Armstrong or not: ");
+            long real_num = input.nextLong();
+            long sum = 0;
+            sum = armstrongNo(sum, real_num);
+            if (sum == real_num) {
+                System.out.println("The Given Number is an Armstrong Number");
+            } else {
+                System.out.println("The Given Number is not an Armstrong Number");
+            }
         }
     }
 

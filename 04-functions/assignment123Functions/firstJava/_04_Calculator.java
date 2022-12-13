@@ -9,23 +9,24 @@ public class _04_Calculator {
      *
      */
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        // define necessary variables
-        double firstNo, secondNo, result;
+        try (Scanner input = new Scanner(System.in)) {
+            // define necessary variables
+            double firstNo, secondNo, result;
 
-        System.out.print("Enter First number: ");
-        firstNo = input.nextDouble();
+            System.out.print("Enter First number: ");
+            firstNo = input.nextDouble();
 
-        System.out.print("Enter Second number: ");
-        secondNo = input.nextDouble();
+            System.out.print("Enter Second number: ");
+            secondNo = input.nextDouble();
 
-        System.out.print("Enter a calculation operate from + - * /: ");
-        char operator = input.next().charAt(0);
-        result = calc(firstNo, secondNo, operator);
-        if (result != 0) {
-            System.out.println(firstNo + " " + operator + " " + secondNo + " = " + result);
-        } else {
-            System.out.println("Invalid Operator");
+            System.out.print("Enter a calculation operate from + - * /: ");
+            char operator = input.next().charAt(0);
+            result = calc(firstNo, secondNo, operator);
+            if (result != 0) {
+                System.out.println(firstNo + " " + operator + " " + secondNo + " = " + result);
+            } else {
+                System.out.println("Invalid Operator");
+            }
         }
 
     }

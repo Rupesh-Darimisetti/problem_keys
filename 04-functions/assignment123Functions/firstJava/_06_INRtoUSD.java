@@ -6,12 +6,13 @@ import java.util.Scanner;
 
 public class _06_INRtoUSD {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        double inr, usd;
-        System.out.print("Enter currency in rupees: ");
-        inr = input.nextDouble();
-        usd = inrToUSD(inr);
-        System.out.print("Currency in USD: " + usd);
+        try (Scanner input = new Scanner(System.in)) {
+            double inr, usd;
+            System.out.print("Enter currency in rupees: ");
+            inr = input.nextDouble();
+            usd = inrToUSD(inr);
+            System.out.print("Currency in USD: " + usd);
+        }
     }
 
     private static double inrToUSD(double inr) {

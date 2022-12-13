@@ -6,10 +6,10 @@ public class _8_Palindrome {
         StringBuilder reverseName = new StringBuilder();
         final String message;
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter a string: ");
-        name = input.next();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a string: ");
+            name = input.next();
+        }
 
         int len = name.length();
 

@@ -5,14 +5,15 @@ import java.util.Scanner;
 // 20. LCM Of Two Numbers
 public class _20_LCMOfTwoNumbers {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter Two values to find LCM");
-        System.out.print("Enter First Number: ");
-        long num_one = input.nextLong();
-        System.out.print("Enter Second Number: ");
-        long num_two = input.nextLong();
-        long lcm = LCM(num_one, num_two);
-        System.out.println("The LCM of " + num_one + " and " + num_two + " = " + lcm);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Enter Two values to find LCM");
+            System.out.print("Enter First Number: ");
+            long num_one = input.nextLong();
+            System.out.print("Enter Second Number: ");
+            long num_two = input.nextLong();
+            long lcm = LCM(num_one, num_two);
+            System.out.println("The LCM of " + num_one + " and " + num_two + " = " + lcm);
+        }
 
     }
 

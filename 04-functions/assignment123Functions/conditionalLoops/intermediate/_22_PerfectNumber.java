@@ -5,12 +5,13 @@ import java.util.Scanner;
 // 22. Perfect Number In Java
 public class _22_PerfectNumber {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a Number to check weather it is Perfect Number or not: ");
-        long num = input.nextLong();
-        int sum = checkPerfectNumber(num);
-        String message = (sum == num && num != 1) ? " is a perfect number" : " is not a perfect number";
-        System.out.println("The Given Number " + num + message);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a Number to check weather it is Perfect Number or not: ");
+            long num = input.nextLong();
+            int sum = checkPerfectNumber(num);
+            String message = (sum == num && num != 1) ? " is a perfect number" : " is not a perfect number";
+            System.out.println("The Given Number " + num + message);
+        }
     }
 
     // A number is a perfect number if is equal to sum of its proper divisors,

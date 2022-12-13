@@ -10,11 +10,12 @@ import java.util.Scanner;
 //0! = 1
 public class _09_FactorialOfANumber {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number to find its factorial: ");
-        int num = input.nextInt();
-        BigInteger factorial = factorial(num);
-        System.out.println("The Factorial of " + num + " = " + factorial);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a number to find its factorial: ");
+            int num = input.nextInt();
+            BigInteger factorial = factorial(num);
+            System.out.println("The Factorial of " + num + " = " + factorial);
+        }
     }
 
     private static BigInteger factorial(int num) {

@@ -4,11 +4,12 @@ import java.util.Scanner;
 // Define a method to find out if he/she is eligible to vote.
 public class _03_EligibilityToVote {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter Age of person to find that he/she is eligible to vote: ");
-        int age_of_person = input.nextInt();
-        String eligibility_to_vote = eligibleToVoteOrNot(age_of_person);
-        System.out.println("A person with " + age_of_person + " years of age is " + eligibility_to_vote);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter Age of person to find that he/she is eligible to vote: ");
+            int age_of_person = input.nextInt();
+            String eligibility_to_vote = eligibleToVoteOrNot(age_of_person);
+            System.out.println("A person with " + age_of_person + " years of age is " + eligibility_to_vote);
+        }
     }
 
     private static String eligibleToVoteOrNot(int age_of_person) {

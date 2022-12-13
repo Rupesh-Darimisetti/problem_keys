@@ -5,11 +5,12 @@ import java.util.Scanner;
 // 16. Reverse A String In Java
 public class _16_ReverseAString {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a Word: ");
-        String word = input.next();
-        String reverse_word = reverseStringConverter(word);
-        System.out.println("The reverse word for " + word + " = " + reverse_word);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a Word: ");
+            String word = input.next();
+            String reverse_word = reverseStringConverter(word);
+            System.out.println("The reverse word for " + word + " = " + reverse_word);
+        }
     }
 
     private static String reverseStringConverter(String word) {

@@ -3,15 +3,16 @@ import java.util.Scanner;
 // 13. Write a function that returns all prime numbers between two given numbers.
 public class _13_PrimeNumbersBetweenTwoGivenNumbers {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter Start Number of Prime Number: ");
-        int start_prime = input.nextInt();
-        System.out.print("Enter End Number of Prime Number: ");
-        int end_prime = input.nextInt();
-        System.out.println("The Prime Number between " + start_prime + " and " + end_prime + " : ");
-        for (int num = start_prime; num <= end_prime; num++) {
-            int prime_no = primeNonePrime(num);
-            if (prime_no != 0) System.out.print(prime_no + "\t");
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter Start Number of Prime Number: ");
+            int start_prime = input.nextInt();
+            System.out.print("Enter End Number of Prime Number: ");
+            int end_prime = input.nextInt();
+            System.out.println("The Prime Number between " + start_prime + " and " + end_prime + " : ");
+            for (int num = start_prime; num <= end_prime; num++) {
+                int prime_no = primeNonePrime(num);
+                if (prime_no != 0) System.out.print(prime_no + "\t");
+            }
         }
     }
 

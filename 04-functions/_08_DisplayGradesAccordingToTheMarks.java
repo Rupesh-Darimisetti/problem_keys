@@ -7,11 +7,12 @@ import java.util.Scanner;
  */
 public class _08_DisplayGradesAccordingToTheMarks {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter Marks to Know Grades: ");
-        int marks = input.nextInt();
-        String grade = grade(marks);
-        System.out.println("The Grade for " + marks + " marks = " + grade);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter Marks to Know Grades: ");
+            int marks = input.nextInt();
+            String grade = grade(marks);
+            System.out.println("The Grade for " + marks + " marks = " + grade);
+        }
     }
 
     private static String grade(int marks) {

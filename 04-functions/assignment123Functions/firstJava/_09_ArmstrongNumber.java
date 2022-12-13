@@ -9,12 +9,13 @@ public class _09_ArmstrongNumber {
         final int firstNumber;
         final int secondNumber;
 
-        Scanner input = new Scanner(System.in);
-        //  take necessary parameters from user
-        System.out.print("Enter First number: ");
-        firstNumber = input.nextInt();
-        System.out.print("Enter Second number: ");
-        secondNumber = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            //  take necessary parameters from user
+            System.out.print("Enter First number: ");
+            firstNumber = input.nextInt();
+            System.out.print("Enter Second number: ");
+            secondNumber = input.nextInt();
+        }
         // loops from first to last number
         for (int num = firstNumber; num <= secondNumber; num++) {
             String no = armstrongNum(num);

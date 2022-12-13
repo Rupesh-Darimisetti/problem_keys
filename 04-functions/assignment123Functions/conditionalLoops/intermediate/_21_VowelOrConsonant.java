@@ -5,12 +5,13 @@ import java.util.Scanner;
 // 21. Java Program Vowel Or Consonant
 public class _21_VowelOrConsonant {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a character to check is it Vowel or constant: ");
-        char alphabet = input.next().charAt(0);
-        String message;
-        message = charTypeChecker(alphabet);
-        System.out.println(message);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a character to check is it Vowel or constant: ");
+            char alphabet = input.next().charAt(0);
+            String message;
+            message = charTypeChecker(alphabet);
+            System.out.println(message);
+        }
     }
 
     private static String charTypeChecker(char alphabet) {

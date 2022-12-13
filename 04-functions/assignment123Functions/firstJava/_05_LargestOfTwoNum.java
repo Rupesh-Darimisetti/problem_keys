@@ -6,17 +6,18 @@ import java.util.Scanner;
 
 public class _05_LargestOfTwoNum {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        long firstNo, secondNo, longNum;
-        System.out.print("Enter first number: ");
-        firstNo = input.nextLong();
-        System.out.print("Enter second number: ");
-        secondNo = input.nextLong();
-        longNum = getLongNum(firstNo, secondNo);
-        if (longNum == 0) {
-            System.out.println("Both numbers are same and it is " + firstNo);
-        } else {
-            System.out.println("The largest of two numbers is " + longNum);
+        try (Scanner input = new Scanner(System.in)) {
+            long firstNo, secondNo, longNum;
+            System.out.print("Enter first number: ");
+            firstNo = input.nextLong();
+            System.out.print("Enter second number: ");
+            secondNo = input.nextLong();
+            longNum = getLongNum(firstNo, secondNo);
+            if (longNum == 0) {
+                System.out.println("Both numbers are same and it is " + firstNo);
+            } else {
+                System.out.println("The largest of two numbers is " + longNum);
+            }
         }
     }
 

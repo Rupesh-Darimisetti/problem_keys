@@ -5,15 +5,16 @@ import java.util.Scanner;
 // 2 - area of scalene triangle
 public class _02_AreaOfTriangle {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first side of triangle: ");
-        float first_side = sc.nextFloat();
-        System.out.print("Enter first side of triangle: ");
-        float second_side = sc.nextFloat();
-        System.out.print("Enter first side of triangle: ");
-        float third_side = sc.nextFloat();
-        double area = areaOfTriangle(first_side, second_side, third_side);
-        System.out.print("Area of Triangle = " + area);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter first side of triangle: ");
+            float first_side = sc.nextFloat();
+            System.out.print("Enter first side of triangle: ");
+            float second_side = sc.nextFloat();
+            System.out.print("Enter first side of triangle: ");
+            float third_side = sc.nextFloat();
+            double area = areaOfTriangle(first_side, second_side, third_side);
+            System.out.print("Area of Triangle = " + area);
+        }
     }
 
     private static double areaOfTriangle(float first_side, float second_side, float third_side) {

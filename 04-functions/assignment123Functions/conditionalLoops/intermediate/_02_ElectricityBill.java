@@ -11,17 +11,18 @@ import java.util.Scanner;
  */
 public class _02_ElectricityBill {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("""
-                Enter Scheme type like\s
-                 \tA if max unit is 75
-                \tB if max unit is 225
-                \tC if max unit is greater than 225:\s""");
-        char scheme_type = input.next().charAt(0);
-        System.out.print("Enter units of Electric Bill: ");
-        int units = input.nextInt();
-        double total = electricityBill(scheme_type, units);
-        System.out.print("The Current total current bill for " + units + " units = " + total);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("""
+                    Enter Scheme type like\s
+                     \tA if max unit is 75
+                    \tB if max unit is 225
+                    \tC if max unit is greater than 225:\s""");
+            char scheme_type = input.next().charAt(0);
+            System.out.print("Enter units of Electric Bill: ");
+            int units = input.nextInt();
+            double total = electricityBill(scheme_type, units);
+            System.out.print("The Current total current bill for " + units + " units = " + total);
+        }
     }
 
     private static double electricityBill(char scheme_type, int units) {

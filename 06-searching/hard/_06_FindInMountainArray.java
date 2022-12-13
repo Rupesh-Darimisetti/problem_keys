@@ -23,7 +23,7 @@ public class _06_FindInMountainArray implements MountainArray{
                 r = n - 2;
                 continue;
             }
-            int mN = MountainArray.get(mid);
+            int mN = mountainArr.get(mid);
             int pN = mountainArr.get(mid-1);
             int bN = mountainArr.get(mid+1);
             if (mN > pN && mN > bN) {
@@ -58,12 +58,12 @@ public class _06_FindInMountainArray implements MountainArray{
         return -1;
     }
 }
-interface MountainArray(int[] array){
+interface MountainArray{
     static int get(int index){
-       return array[index];
+       return -1;
     }
 
     static int length(){
-        return array.length();
+        return -1;
     }
 }
