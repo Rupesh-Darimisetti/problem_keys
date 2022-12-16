@@ -1,15 +1,25 @@
 package hard;
 
-public class _06_FindInMountainArray implements MountainArray{
+interface MountainArray{
+    int[] array= {};
+    static int get(int index){
+       return -1;
+    }
+
+    static int length(){
+        return -1;
+    }
+}
+
+public class _06_FindInMountainArray {
     public static void main(String[] args) {
-        MountainArray mountainArray = {1,2,3,4,5,3,1};
+        int[] mountainArray = new int[]{1, 2, 3, 4, 5, 3, 1};
         int target = 3;
         int result = findInMountainArray(target, mountainArray);
         System.out.println(result);
     }
-
-    private static int findInMountainArray(int target, MountainArray mountainArr) {
-        int n = mountainArr.length();
+    private static int findInMountainArray(int target, int[] mountainArr) {
+        int n = array.length(mountainArr);
         int l = 0;
         int r = n - 1;
         int peek = -1;
@@ -23,9 +33,9 @@ public class _06_FindInMountainArray implements MountainArray{
                 r = n - 2;
                 continue;
             }
-            int mN = mountainArr.get(mid);
-            int pN = mountainArr.get(mid-1);
-            int bN = mountainArr.get(mid+1);
+            int mN = array.get(mountainArr,mid);
+            int pN = array.get(mountainArr,mid-1);
+            int bN = array.get(mountainArr,mid+1);
             if (mN > pN && mN > bN) {
                 peek = mid;
                 peekN = mN;
@@ -43,10 +53,10 @@ public class _06_FindInMountainArray implements MountainArray{
         return binarySearch(peek + 1, n - 1, -1, target, mountainArr);
     }
 
-    private static int binarySearch(int l, int r, int direction, int target, MountainArray mountainArr) {
+    private static int binarySearch(int l, int r, int direction, int target, int[] mountainArr) {
         while (l <= r) {
             int mid = (l + r) / 2;
-            int mN = mountainArr.get(mid);
+            int mN = array.get(mountainArr,mid);
             if (target == mN) {
                 return mid;
             } else if (direction * target < direction * mN) {
@@ -58,12 +68,18 @@ public class _06_FindInMountainArray implements MountainArray{
         return -1;
     }
 }
-interface MountainArray{
-    static int get(int index){
-       return -1;
-    }
 
-    static int length(){
-        return -1;
+class array implements MountainArray{
+   public static int get(int[] array ,int index){
+        return (index >0 && index < array.length -1) ?array[index] : -1;
+    }
+    public static int length(int[]array){
+        int count = 0;
+        if(array != null) {
+            for (int i = 0; i < array.length; i++) {
+                count++;
+            }
+        }
+        return count;
     }
 }
